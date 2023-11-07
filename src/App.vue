@@ -2,7 +2,7 @@
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
       <q-toolbar>
-        <q-toolbar-title>GLF Domain Email Suggestion</q-toolbar-title>
+        <q-toolbar-title>GLF Email Domain Suggestion</q-toolbar-title>
       </q-toolbar>
     </q-header>
     <q-page-container>
@@ -19,7 +19,7 @@ import GlfDomainEmailSuggestion from "./components/GlfDomainEmailSuggestion";
 import { ref } from "vue";
 
 export default {
-  name: "GlfDomainEmailSuggestionExample",
+  name: "GlfEmailDomainSuggestionExample",
 
   components: {
     GlfDomainEmailSuggestion,

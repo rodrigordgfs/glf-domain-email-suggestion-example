@@ -1,26 +1,62 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <q-layout view="lHh Lpr lFf">
+    <q-header elevated>
+      <q-toolbar>
+        <q-toolbar-title>GLF Domain Email Suggestion</q-toolbar-title>
+      </q-toolbar>
+    </q-header>
+    <q-page-container>
+      <div class="col q-ma-md">
+        <glf-domain-email-suggestion v-model="email" :domains="domains" />
+        <span>Email: {{ email }}</span>
+      </div>
+    </q-page-container>
+  </q-layout>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import GlfDomainEmailSuggestion from "./components/GlfDomainEmailSuggestion";
+import { ref } from "vue";
 
 export default {
-  name: "App",
+  name: "GlfDomainEmailSuggestionExample",
+
   components: {
-    HelloWorld,
+    GlfDomainEmailSuggestion,
+  },
+
+  setup() {
+    const email = ref("");
+
+    const domains = [
+      "gmail.com",
+      "hotmail.com",
+      "yahoo.com",
+      "outlook.com",
+      "bol.com.br",
+      "uol.com.br",
+      "ig.com.br",
+      "globomail.com",
+      "live.com",
+      "live.com.br",
+      "oi.com.br",
+      "r7.com",
+      "terra.com.br",
+      "zipmail.com.br",
+      "globo.com",
+      "oi.com",
+      "pop.com.br",
+      "pop.com",
+      "superig.com.br",
+      "superig.com",
+      "oi.com",
+      "ig.com",
+    ];
+
+    return {
+      email,
+      domains,
+    };
   },
 };
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

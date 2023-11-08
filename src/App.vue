@@ -7,7 +7,7 @@
     </q-header>
     <q-page-container>
       <div class="col q-ma-md">
-        <glf-domain-email-suggestion v-model="email" :domains="domains" />
+        <glf-email-domain-suggestion v-model="email" :domains="domains" />
         <span>Email: {{ email }}</span>
       </div>
     </q-page-container>
@@ -15,15 +15,10 @@
 </template>
 
 <script>
-import GlfDomainEmailSuggestion from "./components/GlfDomainEmailSuggestion";
 import { ref } from "vue";
 
 export default {
   name: "GlfEmailDomainSuggestionExample",
-
-  components: {
-    GlfDomainEmailSuggestion,
-  },
 
   setup() {
     const email = ref("");
